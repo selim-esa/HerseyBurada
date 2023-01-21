@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Product
+        <form asp-controller="Admin" asp-action="Edit" method="post">
+            <ul class="list-group">
+             <li class="list-group-item">An item 
+             <button type="button" class="btn btn-primary btn-sm" asp-controller="Product" asp-action="Ekle">Ekle</button>
+            <button type="button" class="btn btn-secondary btn-sm">Düzenle</button>
+            <button type="button" class="btn btn-danger btn-sm">Sil</button>
+            </li>
+       
+            </ul>
+        </form>
+

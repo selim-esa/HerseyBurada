@@ -1,0 +1,12 @@
+﻿@model List<Cart>
+@foreach (var item in Model)
+{
+       <form asp-controller="Cart" asp-action="Index">
+        <ul class="list-group">
+            <li class="list-group-item">An item</li>
+            
+        </ul>
+    </form> 
+}
+
+

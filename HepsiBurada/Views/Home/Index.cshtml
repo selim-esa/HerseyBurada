@@ -1,0 +1,27 @@
+﻿@using Entity;
+@model List<Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@foreach (var item in Model)
+{
+    <form asp-controller="Home" asp-action="Index" method="post">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="@item.Image" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"/>@item.Name
+                            
+                            <p class="card-text">@item.Description @item.Price</p>
+                            <button type="submit" class="btn btn-primary" asp-action="Index" asp-controller="Cart">Sepete Ekle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+}
